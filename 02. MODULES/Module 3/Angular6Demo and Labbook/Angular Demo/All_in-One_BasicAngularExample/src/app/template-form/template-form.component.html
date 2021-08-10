@@ -1,0 +1,71 @@
+<p>template-form works!</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        EMPLOYEE FORM EXAMPLE
+    </title>
+</head>
+
+<body>
+    <form #employeeForm=ngForm (submit)="getData(employeeForm)">
+        <table>
+            <tr>
+                <td>Employee ID</td>
+                <td>
+                    <input id="eid" name="id" [(ngModel)]="emp.eid" type="text" #idcontrol='ngModel' />
+                    <span *ngIf="idcontrol.invalid && idcontrol.touched"> ID is required</span>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>Employee Name</td>
+                <td>
+                    <input required id="ename" name="empname" [(ngModel)]="emp.eName" type="text" #namecontrol="ngModel" />
+                </td>
+                <span *ngIf="namecontrol.invalid && namecontrol.touched"> Name is required</span>
+            </tr>
+            <tr>
+                <td>Employee Salary</td>
+                <td>
+                    <input required id="esal" name="empsalary" [(ngModel)]="emp.eSalary" type="text" #salcontrol="ngModel" />
+                </td>
+                <span *ngIf="salcontrol.invalid && salcontrol.touched"> Salary is required</span>
+            </tr>
+            <tr>
+                <td>Employee Type</td>
+                <td>
+                    <input id="etype" name="empType" [(ngModel)]="emp.eType" type="radio" value="permanent" />Yes
+                    <input id="etype" name="empType" [(ngModel)]="emp.eType" type="radio" value="contract" />No
+                </td>
+            </tr>
+            <tr>
+                <td>Employee Department</td>
+                <td>
+                    <select required id="edep" name="empdep" [(ngModel)]="emp.eDep" #depcontrol="ngModel">
+                        <option *ngFor="let dep of dept" [value]="dep.dId">{{dep.dName}}</option>
+                    </select>
+                    <span *ngIf="depcontrol.invalid && depcontrol.touched"> Select any Department</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Employee Skills</td>
+                <td>
+                    <input id="eskillj" name="empskillj" [(ngModel)]="emp.eskillj" type="checkbox" value="java" />Big Bazar
+                    <input id="eskilln" name="empskilln" [(ngModel)]="emp.eskilln" type="checkbox" value=".net" />DMart
+                    <input id="eskillm" name="empskillm" [(ngModel)]="emp.eskillm" type="checkbox" value="Maniframe" />Reliance
+                    <input id="eskillb" name="empskillb" [(ngModel)]="emp.eskillb" type="checkbox" value="bi" />Mega store
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Add Employee" [disabled]="employeeForm.invalid" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

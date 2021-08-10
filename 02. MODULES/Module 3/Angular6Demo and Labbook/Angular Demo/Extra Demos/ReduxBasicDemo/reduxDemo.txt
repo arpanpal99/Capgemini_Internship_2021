@@ -1,0 +1,22 @@
+const { createStore} = require('redux');
+
+const initialState= { 
+salary:12000
+};
+
+const myReducer = (state=initialState, action) =>{
+	const newState = {...state};
+	if()action.type ==='ADD' 	{
+		newState.salary += 1000;
+	}
+    return newState;
+}
+
+const store = createStore( );
+store.dispatch({type:'ADD'});
+
+console.log(store.getState());
+
+Execute command: npm init
+Initially Install : npm install redux --save
+Run as : node fileName.js

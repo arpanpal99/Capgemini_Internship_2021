@@ -1,0 +1,16 @@
+write a js function to check enter number is palindrome or not?
+write a  js function to check enter number is even or not?
+write a js function to check whether given string is palindrome or not?
+write a js function to check whether given string contains "hello" or not?
+write a js function to declare an array of numbers and find the duplicates in the same?
+(refer to cheat sheet sent on whats app to solve above question)
+write a js function to sum all elements and print the sum?
+write a js function to multiply all elements and print the result?
+write a js function to find second largest among the array elements ?
+write a js function to find second smallest among the array elements?
+write a js function to find given string is substring of another string or not?
+write a js function to remove all duplicates in the given array?
+write a js function to validate the contact us form consist of following details
+email
+mobileno
+comments

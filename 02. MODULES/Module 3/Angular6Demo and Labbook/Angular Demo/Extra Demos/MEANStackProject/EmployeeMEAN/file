@@ -1,0 +1,2 @@
+//npm install json-server --save-dev
+//json-server --watch emp.json

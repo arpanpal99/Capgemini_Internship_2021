@@ -1,0 +1,9 @@
+create a hashmap to store shopping list  with id and nameofitem
+
+and perform
+create
+read the keyset
+read the values
+read the entryset
+replace
+sort the values using treemap

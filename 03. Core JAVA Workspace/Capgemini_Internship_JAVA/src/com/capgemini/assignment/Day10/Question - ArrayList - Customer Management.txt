@@ -1,0 +1,8 @@
+Create a class called Customer (cid,custname,age,dob,email,mobilenumber)
+using arraylist create list of customers
+and while reading the data for the customer, 
+		validate age(!=0,<0,>100,only digits)
+		validatemobilenumber
+		validateemail
+		cid cannot be zero or null or negativevalue and only digits
+		custname should contain only character

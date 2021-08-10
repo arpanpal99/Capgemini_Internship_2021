@@ -1,0 +1,10 @@
+<app-header
+  [name]="currentUser.name"
+  (onNameChanged)="setName($event)">
+</app-header>
+
+<input [(ngModel)]="currentUser.name" />
+
+<div>
+  You are {{currentUser.age}} years old. <button (click)="incrementAge()">Add another year</button>
+</div>

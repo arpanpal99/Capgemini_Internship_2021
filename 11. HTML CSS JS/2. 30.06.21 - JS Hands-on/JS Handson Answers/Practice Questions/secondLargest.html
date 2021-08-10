@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Second Largest Element in Array</title>
+</head>
+<body>
+	<div id="root">
+		Array: [1, 5, 2, -7, 13, 4] <br />
+		Second largest element: 
+	</div>
+
+	<script type="text/javascript">
+		function secondLargest(arr) {
+			arr.sort();
+			document.getElementById('root').innerHTML += (arr[arr.length-1]);
+		}
+
+		secondLargest([1, 5, 2, -7, 13, 4]);
+	</script>
+</body>
+</html>

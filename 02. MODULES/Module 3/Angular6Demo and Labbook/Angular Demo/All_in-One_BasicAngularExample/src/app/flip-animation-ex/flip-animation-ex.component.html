@@ -1,0 +1,17 @@
+<p>flip-animation-ex works!</p>
+<div class="prod-image-wrapper">
+    <div class="prod-image-box" [@flipState]="flip">
+        <div class="prod-image-box__side prod-image-box__front">
+            <img src="https://demos.designersuiteforwp.com/woocommerce-product-designer/wp-content/uploads/2017/07/dark-blue-front.png">
+        </div>
+
+        <div class="prod-image-box__side prod-image-box__back">
+            <img src="https://demos.designersuiteforwp.com/woocommerce-product-designer/wp-content/uploads/2017/07/dark-blue-back.png">
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <button (click)="toggleFlip()">Flip</button>
+</div>

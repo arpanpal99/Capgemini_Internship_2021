@@ -1,0 +1,11 @@
+{
+  "name": "bootstrap-project",
+  "version": "1.0.0",
+  "description": "Sample Bootstrap demo",
+  "main": "index.html",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "jquery": "^3.6.0"
+  }
+}

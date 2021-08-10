@@ -1,0 +1,26 @@
+<p>http-get-ex works!</p>
+<table border="1">
+
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee age</th>
+            <th>Employee Gender</th>
+    
+        </tr>
+        <tr>
+    
+            <tr *ngFor="let emp of employees">
+                <td>{{emp.empId}}</td>
+                <td>{{emp.empName}}</td>
+                <td>{{emp.empSalary}}</td>
+            </tr> 
+    
+    </table>
+
+    <ul class="list-group">
+        <li *ngFor="let post of posts"
+            class="list-group-item">
+            {{ post.title }}
+            <button (click)="deleteItem(post)">Delete</button>
+        </li>
+      </ul>

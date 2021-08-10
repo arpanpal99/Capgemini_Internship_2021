@@ -1,0 +1,9 @@
+<p>attributeng-style -ex works!</p>
+<h2>Example for ngStyle Attribute </h2>
+<button [ngStyle]="{'color' : 'red' , 'font-weight' : 'bold' , 'font-size.px': 20 }">Click Style</button>
+
+<button [ngStyle] = "addButtonCSSStyle()">Click for Dynamic Styles</button>
+
+<div *ngFor='let student of students'>
+        <span [ngStyle] ="{'background-color':student.Gender === 'Male' ? 'yellow' : 'green'}">Name : {{student.Name}}, Gender: {{student.Gender}}, Branch: {{student.Branch}}</span>       
+</div>

@@ -1,0 +1,5 @@
+HandsOn:
+========
+Write a java program using switch statement to perform CRUD 
+(create/update/delete/displayall/displaybyid) operations 
+on Product class with pid,pname,price

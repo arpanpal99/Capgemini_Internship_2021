@@ -1,0 +1,192 @@
+package com.capgemini.absclsexample;
+
+import java.util.Scanner;
+
+public abstract class BankAccount {
+	
+	int accId;
+	String accHolderName;
+	float minBal;
+	float actualBal;
+	String address;
+	String accType;
+	Scanner details = new Scanner(System.in);
+	
+	
+	
+	public BankAccount() {
+		super();
+		System.out.println("In abstract class constructor");
+	}
+
+	public BankAccount(int accId, String accHolderName, float minBal, float actualBal, String address, String accType,
+			Scanner details) {
+		super();
+		this.accId = accId;
+		this.accHolderName = accHolderName;
+		this.minBal = minBal;
+		this.actualBal = actualBal;
+		this.address = address;
+		this.accType = accType;
+		this.details = details;
+	}
+	
+	public void enterDetailsToOpenAccount() {
+		System.out.println("Enter the details to Open an Account");
+		
+	}
+	//abstract method
+	public abstract void openAccount();//method signature
+	
+	public abstract float calculateInterest();
+	
+	public abstract void creditAmount();
+	
+	public abstract void checkBalance();
+	
+	public abstract void withDraw();
+
+}
+==========================================================================
+package com.capgemini.absclsexample;
+
+public  class SavingsAccount extends BankAccount {
+
+	float rateOfInt =  0.3f;
+	int withDrawAmt;
+	int depAmt;
+	public SavingsAccount() {
+	super();//default constructor of the super class is called
+}
+
+	@Override
+	public void openAccount() {
+			super.enterDetailsToOpenAccount();
+			super.minBal = 3000;
+			System.out.println("Enter accid");
+			accId = details.nextInt();
+			System.out.println("Enter accHolderName");
+			details.nextLine();
+			accHolderName = details.nextLine();
+			System.out.println("Enter actualBal");
+			actualBal = details.nextInt();
+			System.out.println("Enter address");
+			details.nextLine();
+			address = details.nextLine();
+			super.accType = "Savings";
+	}
+
+	@Override
+	public float calculateInterest() {
+		// TODO Auto-generated method stub
+		return actualBal * rateOfInt;
+	}
+
+	@Override
+	public void creditAmount() {
+		// TODO Auto-generated method stub
+		System.out.println("amount credited = " +calculateInterest());
+	}
+
+	@Override
+	public void checkBalance() {
+		// TODO Auto-generated method stub
+		System.out.println("amount credited = " + (actualBal + calculateInterest()));
+	}
+
+	@Override
+	public void withDraw() {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the amount to withdraw");
+		withDrawAmt = details.nextInt();
+		System.out.println("after with draw balance = " + (updateAmount()));
+		System.out.println("thank you");
+	}
+	
+
+	public float updateAmount() {
+		// TODO Auto-generated method stub
+		return (actualBal-withDrawAmt);
+		
+	}
+	
+	public void addMoney() {
+		// TODO Auto-generated method stub
+		System.out.println("Enter the amount to deposit");
+		depAmt = details.nextInt();
+		actualBal += depAmt;
+		System.out.println("after with deposit balance = " + (actualBal));
+		System.out.println("thank you");
+	}
+
+}
+===========================================================================================
+package com.capgemini.absclsexample;
+
+import java.util.Scanner;
+
+public class MainAbsCls {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		char ch = 'y';
+		SavingsAccount sa = new SavingsAccount();
+		while (ch == 'y') {
+			System.out.println("Enter the choice");
+			System.out.println("addMoney");
+			System.out.println("withDrawMoney");
+			System.out.println("CheckBal");
+			String option = sc.next();
+			switch (option) {
+			case "addMoney":
+				sa.addMoney();
+				break;
+			case "withDrawMoney":
+				sa.withDraw();
+				break;
+			case "CheckBal":
+				sa.checkBalance();
+				break;
+			default:
+				System.out.println("Not valid option");
+
+			}// switch close
+			System.out.println("do you want to continue");
+			ch = sc.next().trim().charAt(0);
+		} // while close
+	}// main method close
+}// class close
+=============================================================
+https://techvidvan.com/tutorials/java-basics/
+==================================================
+public class AgeNotValid extends Exception{
+	String message;
+	AgeNotValid(String msg){
+		super(msg);
+		message = msg;
+	}
+
+}
+======================================================
+public class UserdefinedException {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the age");
+		int age = sc.nextInt();
+		try {
+			if(age < 18)
+							throw new AgeNotValid("age is below range");
+			else if(age > 80)
+				throw new AgeNotValid("age is out of range");
+		}catch(AgeNotValid an) {
+			System.out.println(an.getMessage());
+		}
+
+	}
+=================================================================================
+Write a java program to define a exception for validating a mobile number
+
+if mobile no is > or < 10 digits it should display mobile number not valid
+
+

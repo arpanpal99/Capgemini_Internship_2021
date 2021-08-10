@@ -1,0 +1,18 @@
+<p>custom-pipes works!</p>
+<table border="1">
+        <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>SALARY</th>
+        <th>DEPARTMENT</th>
+        <th>DOJ</th>
+        </tr>
+        <tr *ngFor="let emp of employees" >
+        <td>{{emp.empId}}</td>
+        <td>{{emp.empName | filterPipe : emp.empSal }}</td> <!-- Channing pipes & passing parameter --> 
+        <td>{{emp.empSal | currency:'USD':true}}</td> <!-- Currency pipes --> 
+        <td>{{emp.empDep | uppercase}}</td>
+        <td>{{emp.empjoiningdate | date:'fullDate'|uppercase}}</td> <!-- Dates pipes channing pipes --> 
+        
+        </tr>
+        </table>

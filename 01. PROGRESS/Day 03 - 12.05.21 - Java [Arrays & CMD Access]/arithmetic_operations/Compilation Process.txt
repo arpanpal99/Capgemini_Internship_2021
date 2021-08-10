@@ -1,0 +1,5 @@
+javac -d . Subtraction.java
+javac -d . Addition.java
+
+java arithmetic_operations.Subtraction
+java arithmetic_operations.Addition

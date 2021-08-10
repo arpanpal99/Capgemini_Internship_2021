@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+	  
+  <bean id="welcomeMsg" class="com.capgemini.springiocexampleusingxml.WelcomeMessage">
+    <property name="message" value="this is the bean from welcome message using xml!!"></property>
+    <property name="name" value="Rama"></property>
+  </bean>
+	
+	<bean id="msg" class="com.capgemini.springiocexampleusingxml.Message">
+    <property name="sendMsg" value="this is the bean message using xml!!"></property>
+  </bean>
+</beans>

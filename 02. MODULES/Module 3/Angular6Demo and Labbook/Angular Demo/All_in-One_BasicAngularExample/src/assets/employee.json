@@ -1,0 +1,26 @@
+[
+    {
+        "empId": 1,
+        "empName": "Ishaque",
+        "empSalary": "28000",
+        "empDepartment": "LnD"
+    },
+    {
+        "empId": 2,
+        "empName": "snigdha",
+        "empSalary": "28343",
+        "empDepartment": "GE"
+    },
+    {
+        "empId": 3,
+        "empName": "Rashmi",
+        "empSalary": "24000",
+        "empDepartment": "Admin"
+    },
+    {
+        "empId": 4,
+        "empName": "Srinivas",
+        "empSalary": "34023",
+        "empDepartment": "HR"
+    }
+]

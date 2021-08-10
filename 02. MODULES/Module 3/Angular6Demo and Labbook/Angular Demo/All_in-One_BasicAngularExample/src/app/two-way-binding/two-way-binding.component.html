@@ -1,0 +1,18 @@
+<p>two-way-binding works!</p>
+<!-- <input type=""text [value]='userName' (input)='updateData($event)'> -->
+<table>
+    <td>
+        <input [(ngModel)]='userName'>
+    </td>
+
+    <td>
+        <input [(ngModel)]='id'>
+    </td>
+
+    <td>
+        <input [(ngModel)]='city'>
+    </td>
+
+</table>
+Hello {{userName}}  {{id}} is ID and is from  {{city}}
+<button (click)="display()">Display Data</button>

@@ -1,0 +1,169 @@
+this
+super
+final
+static
+polymorphism
+
+constructor in java
+===================
+Constructor in java instantiates the Class.
+Constructor in java allocates the memory for the class,when object is created.
+constructor is a method with name as class name with out return type.
+constructor cannot be static
+two types of constructors:
+========================
+1.default constructor
+2.parameterised constructor
+
+Note: if developer forgets to add a constructor,java compiler adds a default constructor.
+
+Calling a constructor inside another constructor ,called as constructor chaining.
+
+constructor overloading:
+========================
+adding extra parameters to the constructor we call it as constructor overloading.
+Example: 
+	public Student();
+	public Student(int sid,String sname,floar marks);
+
+this keyword
+============
+this is a keyword used like a pointer for current class methods,variables and constructor.
+this keyword is used only for instance variables.
+
+super keyword
+============
+super is a keyword used like a pointer for super class methods,variables and constructor.
+
+
+variables are
+=============
+1. instance variable (which are accessed only using the instance/object of the class) => class
+2. local variable (which are declared and used inside the method) => in the method declared
+3. static variables (which are declared in class and used as common value across the project) => can be accessed through out the application
+4. parameters (which are declared inside the circle brackets of method signature) => inside the method
+
+
+static keyword
+==============
+static keyword used to define common value for the project.
+static keyword is used for memory management
+
+
+Example:
+=======
+EMS
+static String companyName;
+
+
+Where to use static keyword?
+
+1.static variables are class variables
+2.static methods are called class methods
+3. static block
+4. static class
+5. static import
+
+
+Points to remember on Static keyword:
+====================================
+1. Constructor cannot be declared as static.
+2. Static data and methods are loaded first in JRE.
+3. Static content doesnot need object to load in the class loader.
+4. non static methods/data(Instance variables or methods) cannot be used inside static method/static block etc.,
+5. static code can be used in side the non static block.
+6. Top class/Outer class cannot be static,inner class can be static
+7. static methods cannot be overriden
+
+JVM
+(Java Virtual Machine)
+======================
+it is a program/software where java program executes
+
+JDK => Java development Kit => contains class libraries
+JRE => Java Runtime Environment => is responsible for executing java program(ByteCode)
+
+Java Inner classes/Nested classes
+===================
+1) Static Inner class
+2) Non Static Inner class
+
+
+Use of Inner Class:
+==================
+to access private data members
+to optimize the code
+
+================================================================
+package formattingexample;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Locale;
+
+import static java.util.Calendar.*;
+
+public class FormattingInJava {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str = "to play Cricket";
+		String hobby= String.format("My favourite hobby is  %s",str);
+		System.out.println(hobby);
+		
+		float  mySalary = 2345.6789123f;
+		System.out.println(String.format("my salary = %.8f ", mySalary));
+		System.out.println(String.format("my salary = %16.8f ", mySalary));
+		
+		int value = 12345;
+		System.out.println(String.format("%07d", value));
+		
+		 System.out.format("Local time: %tT", Calendar.getInstance());
+		 
+		   // Format a string containing a date.
+
+
+		   //Calendar c = new GregorianCalendar(1995, MAY, 23);
+		 //  String s = String.format("Duke's Birthday: %1$tm %1$te,%1$tY", c);
+		 //  System.out.println(s);
+		
+		   
+		   
+		   long n = 461012;
+		      System.out.format("%d%n", n);      //  -->  "461012"
+		      System.out.format("%08d%n", n);    //  -->  "00461012"
+		      System.out.format("%+8d%n", n);    //  -->  " +461012"
+		      System.out.format("%,8d%n", n);    // -->  " 461,012"
+		      System.out.format("%+,8d%n%n", n); //  -->  "+461,012"
+		      
+		      double pi = Math.PI;
+
+		      System.out.format("%f%n", pi);       // -->  "3.141593"
+		      System.out.format("%.3f%n", pi);     // -->  "3.142"
+		      System.out.format("%10.3f%n", pi);   // -->  "     3.142"
+		      System.out.format("%-10.3f%n", pi);  // -->  "3.142"
+		      System.out.format(Locale.FRANCE,
+		                        "%-10.4f%n%n", pi); // -->  "3,1416"
+
+		      Calendar c = Calendar.getInstance();
+		      System.out.format("%tB %te, %tY%n", c, c, c); // -->  "May 29, 2006"
+
+		      System.out.format("%tl:%tM %tp%n", c, c, c);  // -->  "2:34 am"
+
+		      System.out.format("%tD%n", c);    // -->  "05/29/06"
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

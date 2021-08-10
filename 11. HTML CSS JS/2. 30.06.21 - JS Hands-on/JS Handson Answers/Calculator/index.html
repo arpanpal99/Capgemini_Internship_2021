@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript Calculator</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="calculator">
+			<form name="calc">
+				<div class="output">
+					<input type="text" name="input" id="input"><br /><br />	
+				</div>
+				<div class="controls">
+					<input type="button" value="7" onclick="calc.input.value += '7'" />
+					<input type="button" value="8" onclick="calc.input.value += '8'" />
+					<input type="button" value="9" onclick="calc.input.value += '9'" />
+					<input type="button" value="+" onclick="calc.input.value += '+'" />
+					<br /><br />
+					<input type="button" value="4" onclick="calc.input.value += '4'" />
+					<input type="button" value="5" onclick="calc.input.value += '5'" />
+					<input type="button" value="6" onclick="calc.input.value += '6'" />
+					<input type="button" value="-" onclick="calc.input.value += '-'" />
+					<br /><br />
+					<input type="button" value="1" onclick="calc.input.value += '1'" />
+					<input type="button" value="2" onclick="calc.input.value += '2'" />
+					<input type="button" value="3" onclick="calc.input.value += '3'" />
+					<input type="button" value="*" onclick="calc.input.value += '*'" />
+					<br /><br />
+					<input type="button" value="0" onclick="calc.input.value += '0'" />
+					<input type="button" value="." onclick="calc.input.value += '.'" />
+					<input type="button" value="/" onclick="calc.input.value += '/'" />
+					<input type="button" value="=" id="equals" onclick="calc.input.value = eval(calc.input.value)" />
+					<br /><br />
+				</div>	
+			</form>
+		</div>
+	</div>
+</body>
+</html>

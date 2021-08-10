@@ -1,0 +1,168 @@
+Wednesday (28-07-2021)
+===================
+What is Hibernate?
+What is ORM?
+What is JPA?
+How to integrate Hibernate in to spring boot?
+
+Hibernate Version? Hibernate 5
+What are the POM dependencies for creating a spring boot web application?
+=> By default  it contains
+     Spring-Boot-Parent
+     Spring -boot-test
+=> Spring Boot web
+
+What are the POM dependencies for creating a spring boot  and hibernate web application?
+
+=> By default  it contains
+     Spring-Boot-Parent
+     Spring -boot-test
+=> Spring Boot web
+=> Spring Data JPA
+
+If I want to get new code automatically which depedency I want to add in the POM.xml file?
+
+=> dev tools
+
+Where to provide database and hibernate related details/configuration in spring boot application?
+src/main/resources => application.properties 
+
+What is @SpringBootApplication?
+========================
+Spring Boot @SpringBootApplication annotation is used to mark a configuration class that declares one or more @Bean methods and also triggers auto-configuration and component scanning. It's same as declaring a class with @Configuration, @EnableAutoConfiguration and @ComponentScan annotations
+
+What is the annotation used to mark a bean(class or interface) as Repository?
+========================================================
+@Repository 
+
+What is the annotation used to mark a bean(class or interface) as service?
+========================================================
+@Service
+
+What is the annotation used to inject dependency?
+========================================================
+@Autowired
+
+What is dependency Injection?
+=======================
+Classes often require references to other classes. For example, a Car class might need a reference to an Engine class. These required classes are called dependencies, and in this example the Car class is dependent on having an instance of the Engine class to run.
+
+Dependency Injection (DI) is a design pattern used to implement IoC(Inversion of Control). 
+It allows the creation of dependent objects outside of a class and provides those objects to other class through different ways.
+
+Types of Dependency Injection
+======================
+Constructor Injection
+Property Injection
+Method Injection
+
+What is @RequestMapping?
+===================
+@RequestMapping. is one of the most common annotation used in Spring Web applications. This annotation maps HTTP requests to handler methods of MVC and REST controllers
+
+What is the difference between @RequestMapping and @GetMapping?
+====================================================
+@RequestMapping is one of the most widely used Spring MVC annotation.
+ org.springframework.web.bind.annotation.RequestMapping 
+annotation is used to map web requests onto specific handler classes and/or handler methods.
+
+@RequestMapping can be applied to the controller class as well as methods.
+@GetMapping can be applied to the  methods for HTTP Get Requests.
+
+What is @PathVariable annotation?
+==========================
+the @PathVariable annotation can be used to handle template variables in the request URI mapping, and set them as method parameters.
+
+URL: http://localhost:8080/book/9783827319333
+
+Now, to extract the value of ISBN number from the URI in your Spring Boot Controller's handler method, you can use @PathVariable annotation as shown in the following code:
+@RequestMapping(value="/book/{ISBN}", method= RequestMethod.GET)
+public String showBookDetails(@PathVariable("ISBN") String id,
+                              Model model){
+   model.addAttribute("ISBN", id);
+   return "bookDetails";
+}
+
+
+Read more: https://javarevisited.blogspot.com/2017/10/differences-between-requestparam-and-pathvariable-annotations-spring-mvc.html#ixzz71uS2ArjZ
+
+What is @RequestParam annotation?
+===========================
+Using @RequestParam to get Query parameters
+In a Spring Boot Web application, you can use the @RequestParam annotation to accept query parameters in Controller's handler methods.
+
+For examples, suppose you have a web application that returns details of orders and trades, and you have the following URLs:
+
+http://localhost:8080/eportal/orders?id=1001
+
+To accept the query parameters in the above URLs, you can use the following code in the Spring Boot controller:
+@RequestMapping("/orders")
+public String showOrderDetails(@RequestParam("id") String orderId, Model model){
+   model.addAttribute("orderId", orderId);
+   return "orderDetails";
+}
+
+JPA Annotations
+============
+What is @Entity annotation?
+====================
+The @Entity annotation specifies that the class is an entity and is mapped to a database table.
+
+What is @Id annotation?
+====================
+is used to specify a column as primary key
+
+What is @Generation
+
+What is @Column annotation?
+======================
+is used to specify column name to create in relation/table
+
+What is @Table annotation?
+======================
+is used to specify table name to create in database
+
+What is @NotBlank annotation?
+=======================
+   @NotBlank(message = "Email is mandatory")
+    private String email;
+
+What is @NotNull annotation?
+======================
+@NotNull. This says that value of variable/attribute/property can't be null in entity class 
+
+Validations annotations in entity class
+==========================
+Constraint	Description
+========================
+@NotEmpty	Tests that the annotated element is not null nor empty
+@Email		Tests that the specified character sequence is a well-formed email address
+@Pattern		Tests that the annotated string matches the regular expression specified by the “regex” attribute
+@Past		Test whether the annotated date is in the past
+
+Is ID mandatory in Hibernate?
+======================
+Yes, hibernate requires an Id
+
+What is the difference between JPA repository and CrudRepository?
+==================================================
+CrudRepository mainly provides CRUD functions. 
+PagingAndSortingRepository provides methods to do pagination and sorting records. 
+JpaRepository provides some JPA-related methods such as flushing the persistence context and deleting records in a batch and 
+JpaRepository extends CrudRepository and PagingAndSortingRepository.
+
+What is @RestController annotation in Spring boot?
+=====================================
+Spring RestController annotation is a convenience annotation that is itself annotated with @Controller and @ResponseBody .
+This annotation is applied to a class to mark it as a request handler. 
+Spring RestController annotation is used to create RESTful web services using Spring MVC and Spring Boot.
+
+What is the difference between @component @repository @service and @controller?
+==================================================================
+@Component is a generic stereotype for any Spring-managed component or bean. 
+@Repository is a stereotype for the persistence layer. 
+@Service is a stereotype for the service layer. 
+@Controller is a stereotype for the presentation layer (spring-MVC).
+
+
+

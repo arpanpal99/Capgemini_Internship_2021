@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Remove duplicates in an array</title>
+</head>
+<body>
+	<div id="root">
+		Before deletion: [1, 2, 3, 2, 3] <br />
+		After deletion: 
+	</div>
+
+	<script type="text/javascript">
+		function removeDuplicates(arr) {
+			let set = [];
+			for (let i of arr) 
+				if (set.indexOf(i) === -1)
+					set.push(i);
+			document.getElementById('root').innerHTML += ("[" + set + "]");
+		}
+
+		removeDuplicates([1, 2, 3, 2, 3]);
+	</script>
+</body>
+</html>

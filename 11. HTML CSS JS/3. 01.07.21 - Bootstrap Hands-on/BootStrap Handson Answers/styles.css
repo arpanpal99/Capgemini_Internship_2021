@@ -1,0 +1,103 @@
+/* page */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* navbar */
+
+.nav-item {
+    padding: 0px 30px 0px 30px;
+}
+
+/* header */
+
+.header {
+    height: 100vh;
+    background-image: url('resources/images/back.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+}
+
+.description {
+    padding: 150px;
+}
+
+.description h1 {
+	color: orange;
+}
+
+.description p {
+	color: grey;
+	font-size: 1.3rem;
+	line-height: 1.5;
+}
+
+/* about me */
+
+.heading > h1 {
+    color: orange;
+    margin-top: 50px;
+    margin-bottom: -40px;
+}
+
+.about__me {
+    text-align: left;
+    border-left: 5px solid #13848D;
+    padding-top: 50px;
+}
+
+.about__me > h3 {
+    color: #13848D;
+}
+
+.my__img > img {
+    border-radius: 50%;
+}
+
+/* portfolio */
+
+.port_img {
+    margin: 20px;
+}
+
+/* team */
+
+.team__mem {
+    position: relative;
+}
+
+.teamDesc {
+    background: orange;
+    color: white;
+    text-align: center;
+    border-radius: 0px 0px 0px 80%;
+    transition:.3s ease-in-out;
+}
+
+.team__mem:hover .teamDesc {
+    height: 100%;  
+    background:orangered;  
+    position: absolute;  
+    width: 91%;  
+    padding: 5em;  
+    top: 0;  
+    border-radius: 0px;
+    opacity: 0.5;
+}
+
+/* contact */
+
+.contact-form {
+    padding: 20px;
+}
+.contact-btn {
+    margin-left: 20px;
+    width: 95%;
+}

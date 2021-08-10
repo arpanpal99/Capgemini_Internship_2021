@@ -1,0 +1,8 @@
+<p>observable-ex works!</p>
+<section>
+    <ul>
+        <li *ngFor='let item of apiData | async'>
+            <p>{{item.title}}</p>
+        </li>
+    </ul>
+</section>

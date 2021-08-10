@@ -1,0 +1,21 @@
+<p>own-directive-ex works!</p>
+<h1>USING Host Listner</h1>
+
+<h4>Pick a highlight color</h4>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+  <input type="radio" name="colors" (click)="color='blue'">Blue
+</div>
+<p [appMyOwnDirective]="color">Highlight me!</p>
+
+<p [appMyOwnDirective]="color" defaultColor="violet">
+  Highlight me too!
+</p>
+
+<hr>
+<p><i>Mouse over the following lines to see fixed highlights</i></p>
+
+<p [appMyOwnDirective]="'yellow'">Highlighted in yellow</p>
+<p appMyOwnDirective="orange">Highlighted in orange</p>

@@ -1,0 +1,18 @@
+<p>ng-switch-example works!</p>
+<h2>Select Country </h2>
+
+<select (change)="SetDropSownValue($event)">
+<option value="">Select</option>
+<option value="In">India</option>
+<option value="usa">America</option>
+<option value="uae">Dubai</option>
+</select>
+
+<h2>You Have Selected</h2>
+
+<div [ngSwitch]='dropDownValue'>
+        <h3 *ngSwitchCase="'In'">India</h3>
+        <h3 *ngSwitchCase="'usa'">United State</h3>
+        <h3 *ngSwitchCase="'uae'">United Kingdom</h3>
+        <h3 *ngSwitchDefault="">You have not selected any country</h3>    
+</div>

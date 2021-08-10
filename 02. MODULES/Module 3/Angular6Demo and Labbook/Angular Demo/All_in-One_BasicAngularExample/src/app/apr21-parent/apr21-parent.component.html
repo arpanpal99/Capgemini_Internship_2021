@@ -1,0 +1,6 @@
+<p>apr21-parent works!</p>
+<!-- <button (click)='sendToChild('Hello to Child!!!')'></button> -->
+<p>data is  : {{receiveChildMessage}}</p>
+<app-apr21-child (messageToEmit)="getMessage($event)"></app-apr21-child>
+
+<!-- [receiveParentMessage]='fromParentMessageToChild'  -->

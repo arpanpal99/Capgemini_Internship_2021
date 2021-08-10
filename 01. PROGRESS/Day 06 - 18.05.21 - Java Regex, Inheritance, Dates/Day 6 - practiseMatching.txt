@@ -1,0 +1,50 @@
+Write a program to validate username and password and email and mobileno and city and pincode?
+
+a) username should be greater than 8 characters should contain atleast one spl character either _,-,.
+b) validate email 
+c)validate the password ,which should contain 8 characters with atleast one spl character
+d) city should contain only alphabets
+e)  pincode should contain only 6 digitsx
+f) mobile number should start with either 7,8,9 and length of 10 
+
+/*		public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		/*
+		System.out.println("Enter username :");
+		String name=sc.next();
+		String regexName="^[a-zA-Z0-9+_-.]$";
+		Pattern p=Pattern.compile(regexName);
+		Matcher m=p.matcher(name);
+		System.out.println(m.matches());
+		//System.out.println(Pattern.matches(regexName, name));
+	*/
+		System.out.println("Enter password :");
+		String password=sc.next();
+		System.out.println(Pattern.matches("[a-zA-Z0-9]{8,16}", password));
+	
+		String regexEmail2="^[a-zA-Z0-9+_.-]+@(.+)$";
+		System.out.println("Enter email :");
+		String email=sc.next();
+		Pattern pattern1=Pattern.compile(regexEmail2);
+		Matcher matcher1=pattern1.matcher(email);
+		System.out.println(matcher1.matches());
+		
+		System.out.println("Enter mobile number :");
+		String mobno=sc.next();
+		System.out.println(Pattern.matches("[789]{1}\\d{9}", mobno));
+		
+		System.out.println("Enter city :");
+		String city=sc.next();
+		System.out.println(Pattern.matches("[a-zA-Z]", city));
+		
+		System.out.println("Enter pincode :");
+		String pin=sc.next();
+		String regexP="^[0-9]{6}$";
+		Pattern p1=Pattern.compile(regexP);
+		Matcher m1=p1.matcher(pin);
+		boolean result=m1.matches();
+		System.out.println(result);
+
+	}
+	*/

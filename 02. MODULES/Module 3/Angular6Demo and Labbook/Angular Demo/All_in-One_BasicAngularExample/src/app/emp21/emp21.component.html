@@ -1,0 +1,26 @@
+<p>emp21 works!</p>
+<body>
+<table border="2">
+<tr>
+    <th>ID</th>
+    <th>FN</th>
+    <th>LN</th>
+    <th>DOB</th>
+    <th>GENDER</th>
+    <th>BRANCH</th>
+</tr>
+
+<tr *ngFor="let stud of students">
+<td>{{stud.ID}}</td>
+<td>{{stud.FirstName}}</td>
+<td>{{stud.LastName}}</td>
+<td>{{stud.Branch}}</td>
+<td>{{stud.DOB}}</td>
+<td>{{stud.Gender}}</td>
+
+</tr>
+
+
+</table>
+</body>
+

@@ -1,0 +1,28 @@
+{
+    "employees": [
+        {
+            "firstName": "1",
+            "lastName": "Ishaque",
+            "email": "28000",
+            "phone": "LnD"
+        },
+        {
+            "firstName": "2",
+            "lastName": "snigdha",
+            "email": "28343",
+            "phone": "GE"
+        },
+        {
+            "firstName": "3",
+            "lastName": "Rashmi",
+            "email": "24000",
+            "phone": "Admin"
+        },
+        {
+            "firstName": "4",
+            "lastName": "Srinivas",
+            "email": "34023",
+            "phone": "HR"
+        }
+    ]
+}

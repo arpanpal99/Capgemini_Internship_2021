@@ -1,0 +1,8 @@
+Write a java program to create a class Flower(fid,fname,pricePerKg,qty)  and create a
+HashSet for managing Flower objects.
+
+create ListofFLowers
+display flowersList
+remove flower based on quantity <0 or equal to 0
+
+Hint:Use Swtich Case for choice from the user

@@ -1,0 +1,20 @@
+<p>attributeng-class-ex works!</p>
+<h3 [ngClass]="'one'">
+        Angular ngClass with String only with one css class for font color
+   </h3>
+<br>
+<br>
+   <h3 [ngClass]="'one four'">
+        Angular ngClass with String with 2 css classes applied. Font color and Font Style Italic
+   </h3>
+
+   <br>
+   <br>
+   <h3 [ngClass]="['three', 'four', 'five']">
+        Angular ngClass with Array of more than 1 css classes applied here. 
+   </h3>
+   <br>
+   <h3 [ngClass]="{'one':true, 'two':false, 'three':true}">
+        Angular ngClass as an JSON Object as Key value Pair, where you can set true or false values in CSS Classes.
+   </h3>
+   

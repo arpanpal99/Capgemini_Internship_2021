@@ -1,0 +1,162 @@
+Tuesday (27-07-2021)
+================
+
+JDBC
+====
+Java DataBase Connectivity
+
+Collections
+========
+Collection is an interface
+
+all collections are defined under java.util
+
+Set 
+===
+Set is an interface which extends collection interface
+Set doesnot allow the duplicates
+Set doesnot follow insertion order
+Set allows null value
+
+Implemented Classes of the Set
+======================
+HashSet => does not follow inserion order
+LinkedHashSet =>Internally it used Doubly Linked List to store and manipulate the data
+TreeSet => inserts the objects in natural order(lexograpically) ,because it has implement an extra interface called sorted set
+
+What is difference between Collection and Array?
+====================================
+Array is used to store same type of data in sequential order
+Array is static in size
+Array has less perfomance than ArrayList
+We can store primitive values like int,float,char etc., in the ArrayList
+
+Collection  is used to store Objects of same type and different also
+Collection is dynamic in size
+Collection has better perfomance than Array
+Collection  cannot store primitive values in the ArrayList
+
+What is difference between Array and ArrayList?
+=====================================
+Array is used to store same type of data in sequential order
+Array is static in size
+Array has less perfomance than ArrayList
+We can store primitive values like int,float,char etc., in the ArrayList
+
+ArrayList is used to store object in sequential order using an Array
+Arraylist is dynamic in size
+ArrayList has better perfomance than Array
+We cannot store primitive values in the ArrayList
+
+What is difference between Vector and ArrayList?
+===================================
+similarites
+=======
+Vector and ArrayList uses Array internally as  data structure.
+Both are dynamically resizeable
+
+differences
+========
+only difference is how they are resized 
+  => Vector doubles the size of its array when we add more elements
+ => ArrayList increases by half of its size when we add more elements
+
+ArrayList is have better performance than Vector?
+why?
+Because ArrayList methods are not synchornized but Vector methods are synchornized
+
+What is synchronized or synchronization?
+=============================
+it prevents concurrent access of the code
+
+class A{
+     methodOne(){
+}
+     methodTwo(){
+}
+}
+
+class A{
+    synchronized methodOne(){ 
+}
+    synchronized methodTwo(){
+}
+}
+
+What is difference between Comparator and Comparable?
+==========================================
+Comparable provides only one sorting sequence,i.e., we can only sort on id or name or price
+Comparator provides multiple sorting sequences,i.e., we can sort the collection bases on different values
+
+Comparable affects the original collection
+comparators doesnot affect the original collection
+
+compareTo() method is used to sort in Comparable  => Java.lang 
+compare() method is used to sort elements in Comparator => java.util
+
+Collections.sort(List)
+Collections.sort(List,Comparator)
+
+What is difference between Iterator and ListIterator ?
+======================================
+Iterator can be used only forward direction
+ListIterator can be used in forward and backward direction
+
+Scanner is the class to read the data from the keyboad.It is defined in java.util
+
+nextInt(),nextFloat(),next(),nextLine() etc., are the methods of Scanner class to read different data types in java.
+
+
+System.in => means to take input from the keyboard or user => input stream class reference variable
+System.out => to print output to the console => print stream class reference variable
+
+System is a class defined in java.lang package
+in and out and err are reference variables in System
+
+println statement in java is a method in Print Stream  class which is defined in java.io package
+
+What is method in java?
+=================
+public void bankingOperations() { //method header or method signature 
+
+//method body
+
+//return statement
+}
+
+part in method header or method signature :
+===============================
+public => access specifier
+void => return type
+<method name> =>name of the method
+() => parameter list
+
+"Method is a piece code written inside the class to implement a task"
+
+=====================================================================================
+
+What is difference between HashSet and HashMap?
+What is difference between HashTableand HashMap?
+What is hashcode() method?
+what is toString() method?
+what is equals() method?
+what is object class? and its methods?
+what is lang package in java?
+list some packages in java?
+
+
+
+
+
+
+
+
+
+
+
+What is Agile	
+Has a simple implementation	
+Increases productivity	
+Uses iterative, incremental practices	
+All the above	
+d	

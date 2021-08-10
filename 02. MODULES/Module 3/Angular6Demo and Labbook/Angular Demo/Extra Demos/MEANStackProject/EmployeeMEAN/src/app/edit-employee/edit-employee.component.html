@@ -1,0 +1,27 @@
+<p>edit-employee works!</p>
+<div class="col-md-6">
+    <h2 class="text-center">Edit employee</h2>
+    <form [formGroup]="frmGroup" (ngSubmit)="updateEmployee()">
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control" id="email">
+    </div>
+    
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+    </div>
+    
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+    </div>
+    
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input formControlName="phone" placeholder="Ph No" name="phone" class="form-control" id="phone">
+    </div>
+    
+    <button class="btn btn-success">Update</button>
+    </form>
+    </div>

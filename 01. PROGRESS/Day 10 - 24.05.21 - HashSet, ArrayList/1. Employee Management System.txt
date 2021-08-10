@@ -1,0 +1,184 @@
+package com.capgemini.ems;
+
+import java.util.Scanner;
+
+public class Employee {
+	private int empId;
+	private String empName;
+
+	public Employee() {
+		super();
+	}
+	public Employee(int empId, String empName) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+	}
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+	public String getEmpName() {
+		return empName;
+	}
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+
+	public void displayEmpDetails() {
+		// TODO Auto-generated method stub
+		System.out.println("empId = " + empId + "Emp name = " + empName);
+		System.out.println();
+	}
+
+	//displayEmpDetails with Employee Object as argument 
+	public void displayEmpDetails(Employee emp) {
+		// TODO Auto-generated method stub
+		System.out.println("empId = " + emp.getEmpId() + "Emp name = " + emp.getEmpName());
+		System.out.println();
+	}
+
+	//overloaded the method displayEmpDetails by Employee[] object as argument
+	public void displayEmpDetails(Employee[] emp) {
+		for(int i=0;i<emp.length;i++) {
+			System.out.println("empId = " + emp[i].getEmpId() + "Emp name = " + emp[i].getEmpName());
+			System.out.println();
+		}
+	}
+	//find an employee by id
+	public void findEmployeeById(Employee[] emp,int id) {
+		for(int i=0;i<emp.length;i++) {
+			if(emp[i].getEmpId() == id)
+			{
+				System.out.println("employee found at " + i);
+				System.out.println("empId = " + emp[i].getEmpId() + "Emp name = " + emp[i].getEmpName());
+				break;
+			}else {
+				System.out.println("No employee found");
+			}
+		}
+		System.out.println();
+	}
+	
+	//creating the list of employees using array and returning an array
+	   Scanner sc = new Scanner(System.in);
+	   Employee[] empList1 = new Employee[3];
+	public Employee[] createEmpList() {
+		   for(int i=0;i<empList1.length;i++) {
+			   System.out.println("Enter the employee details for  "+ i + " emp object");
+			   empList1[i] = new Employee();
+			   empList1[i].setEmpId(sc.nextInt());
+			   empList1[i].setEmpName(sc.next());
+		   }
+		   return empList1;
+	}
+
+	//find an employee by id
+	public void updateEmployeeById(Employee[] emp,int id) {
+		for(int i=0;i<emp.length;i++) {
+			if(emp[i].getEmpId() == id)
+			{
+				System.out.println("employee found at " + i);
+				System.out.println("Enter new name to update for the employee");
+				String updatedname=sc.next();
+				emp[i].setEmpName(updatedname);
+				System.out.println("empId = " + emp[i].getEmpId() + "Emp name = " + emp[i].getEmpName());
+				break;
+			}else {
+				System.out.println("No employee found");
+			}
+		}
+		System.out.println();
+	}
+	
+	//delete an employee by id
+		public Employee[] deleteEmployeeById(Employee[] emp,int id) {
+			int originalLength = emp.length;
+			for(int i=0;i<originalLength;i++) {
+				if(emp[i].getEmpId() == id)
+				{
+					System.out.println("employee found at " + i);
+					emp[i] = emp[originalLength-1];
+					originalLength--;
+					break;
+				}else {
+					System.out.println("No employee found");
+				}
+			}
+			System.out.println();
+			return emp;
+		}
+}
+
+=======================================================================================
+package com.capgemini.ems;
+
+import java.util.Scanner;
+
+public class EmployeeMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Declaring an array of employee
+		Employee[] empList;
+		
+		//allocating the memory for 3 employee objects 
+		empList = new Employee[3];
+		
+		//Employee[] empList = new Employee[3];
+		
+		//Initializing the first array element with employee Object
+		empList[0] = new Employee(1234, "Rama");
+		empList[1] = new Employee(1235, "Ramana");
+		empList[2] = new Employee(1236, "Ramji");
+		
+		//displaying data in the objects stored in the array using index
+		empList[0].displayEmpDetails();
+		empList[1].displayEmpDetails();
+		  //displayEmpDetails with no argument is called
+	   empList[2].displayEmpDetails();
+	   
+	   Employee emp = new Employee();
+	   Employee[] empList1 = new Employee[3];
+	   Scanner sc = new Scanner(System.in);
+	   empList1 =  emp.createEmpList();
+
+	   
+	
+		  //displayEmpDetails with employee[] object as argument is called
+		  System.out.println("Out put from displayEmpDetails with employee[] object as argument ");
+	  emp.displayEmpDetails(empList1);
+	  
+	  Employee emp2 = new Employee();
+	  emp2.setEmpId(120005);
+	  emp2.setEmpName("Ramji");
+	  System.out.println("Out put from displayEmpDetails with employee object as argument ");
+	  //displayEmpDetails with employee object as argument is called
+	  emp.displayEmpDetails(emp2);
+	   
+	  //call find by employee by id
+	  System.out.println("Enter the empid to find an employee");
+	  int id = sc.nextInt();
+	  emp.findEmployeeById(empList1, id);
+	  
+	  
+	  //call update by employee by id
+	  System.out.println("Enter the empid to update an employee details");
+	  int eid = sc.nextInt();
+	  emp.updateEmployeeById(empList1, eid);
+	  
+	  //call delete by employee by id
+	  System.out.println("Enter the empid to delete an employee details");
+	  int did = sc.nextInt();
+	  emp.deleteEmployeeById(empList1, did);
+	 
+	   
+	}
+}
+=======================================================================
+https://www.javamadesoeasy.com/2015/10/collection-java-mcq-150-multiple-choice.html
+====================================================================

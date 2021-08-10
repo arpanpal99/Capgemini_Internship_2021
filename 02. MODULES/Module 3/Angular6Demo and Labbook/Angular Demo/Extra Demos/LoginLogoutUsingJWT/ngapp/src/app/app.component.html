@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">BooksHub</a>
+  <button clas="nav-bar toggler" type="button" data-toggle="collapse" data-target="#nav-bar">  
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/books" routerLinkActive="active">Books</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/specialBooks" routerLinkActive="active">specialBooks</a>
+    </li>  
+  </ul>
+  <ul class="navbar-nav">
+     <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+     <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+  </ul>
+</div>
+</nav>
+<div class="container">
+  <router-outlet> </router-outlet>
+</div>

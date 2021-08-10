@@ -1,0 +1,13 @@
+<div style="max-width:300px;">
+  <h3>Create Customers</h3>
+  <div class="form-group">
+    <input class="form-control" type="text" placeholder="id" #id>
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" placeholder="name" #name>
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="number" placeholder="age" #age>
+  </div>
+  <button class="btn btn-success" (click)="saveCustomer(id.value,name.value,age.value)">Save Customer</button>
+</div>

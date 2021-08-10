@@ -1,0 +1,7 @@
+Hey this is the Source File
+Texts from this file should be copied into the Target file
+
+Update this file by writing anything below, run the FileProgram.java
+And you can see the texts copied to that file.
+
+Good luck!

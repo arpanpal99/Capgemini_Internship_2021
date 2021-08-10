@@ -1,0 +1,18 @@
+Sender's email
+Recepient's email
+
+
+[01:20 pm] Jayshree (Guest)
+Hello First Name - Managers/Clients
+
+[01:22 pm] Jayshree (Guest)
+Hi First_Names - Peers, Known Subordinates
+
+[01:23 pm] Jayshree (Guest)
+Dear All/Team - Group
+
+
+Subject
+Body
+Acknowledgement
+Attachments (if any)

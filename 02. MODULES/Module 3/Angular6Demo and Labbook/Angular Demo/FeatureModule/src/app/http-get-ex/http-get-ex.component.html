@@ -1,0 +1,25 @@
+<p>http-get-ex works!</p>
+<table border="1">
+
+    <tr>
+        <td> <button (click)="postEmp()">Add Emp</button></td>
+    </tr>
+
+	<!--chzange code for product id and its properties to be displayed-->
+    <tr>
+        <th>Employee ID</th>
+        <th>Employee age</th>
+        <th>Employee Gender</th>
+
+    </tr>
+
+    <tr>
+
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.id}}</td>
+            <td>{{emp.empName}}</td>
+            <td>{{emp.empSalary}}</td>
+            <td><button (click)="delEmp(emp.id)">Delete</button></td>
+        </tr>
+
+</table>

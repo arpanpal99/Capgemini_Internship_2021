@@ -1,0 +1,56 @@
+<!-- Using Interpolation invoking Methods{{changed()}} -->
+<span>{{employeeVar}}</span>
+<!-- other way of one way binding -->
+<span [innerHtml]=e mpObj.empname> Using innerhtml </span>
+
+<table border="2">
+    <tr>
+        <td>
+            EMPID
+        </td>
+        <td>
+            {{empObj.empId}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            EmpName
+        </td>
+        <td>
+            {{empObj.empname}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Emp Salary
+        </td>
+        <td>
+            {{empObj.empSalary}}
+        </td>
+    </tr>
+</table>
+
+<button [disabled]='isDisabled'> OK </button>
+<br>
+<button disabled='{{isDisabled}}'> Cancel </button>
+
+<br>
+<br>
+<button [disabled]='isDis'>NOW OK </button>
+<br>
+<button disabled='{{isDis}}'>NOW Cancel </button>
+<br>
+<br>
+<button (click)="clicked($event)">Click and Goto Console</button>
+<!-- https://investmentnovel.com/angular-6-event-binding-example-tutorial/ -->
+<div>
+    <div>
+        {{text}}
+    </div>
+    <button class="btn" (click)='submit($event)' (mousemove)="mouseMove($event)">
+        Submit
+    </button>
+    <div>
+        {{x}} | {{y}}
+    </div>
+</div>

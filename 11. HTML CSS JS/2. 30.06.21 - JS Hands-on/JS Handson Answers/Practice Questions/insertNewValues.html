@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Insert new values to specific index</title>
+</head>
+<body>
+	<div id="root">
+		Before inserting: [1, 2, 3, 4, 5] <br />
+		After inserting 8 at 3rd position: 
+	</div>
+
+	<script type="text/javascript">
+		function insertValue(arr, n) {
+			arr.splice(2, 0, 8);
+
+			document.getElementById('root').innerHTML += ("[" + arr + "]");
+		}
+
+		insertValue([1, 2, 3, 4, 5], 3);
+	</script>
+</body>
+</html>
